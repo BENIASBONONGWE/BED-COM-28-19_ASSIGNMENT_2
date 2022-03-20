@@ -32,8 +32,9 @@ public class Main  extends Application {
         hBox.setAlignment(Pos.CENTER);
         
         Button allRooms=new Button("AllRooms ON/OFF");
-        allRooms.setOnAction(new LightsOn(rooms));
-        Button twoRoom=new Button("Room1&2 ON/OFF");
+        allRooms.setOnAction(new RoomsLights(rooms));
+        Button TwoRooms=new Button("Room1&2 ON/OFF");
+         TwoRooms.setOnAction(new TwoRooms(rooms));
         Button room1=new Button("Room1 ON/OFF");
         room1.setOnAction(new Room1(rooms));
         Button room2=new Button("Room2 ON/OFF");
@@ -62,9 +63,9 @@ public class Main  extends Application {
         buttons3.setAlignment(Pos.CENTER);
 
         buttons1.getChildren().addAll(allRooms,room2,room5);
-        buttons2.getChildren().addAll(twoRoom,room3,room6);
+        buttons2.getChildren().addAll(TwoRooms,room3,room6);
         buttons3.getChildren().addAll(room1,room4,room7);
-        VBox flow=new VBox(5);
+        VBox flow=new VBox(10);
         BorderPane borderPane=new BorderPane();
         borderPane.setTop(menuBar);
         flow.setPadding(new Insets(10,5,5,30));
@@ -72,10 +73,10 @@ public class Main  extends Application {
         flow.getChildren().addAll(hBox,rooms,buttons1,buttons2,buttons3);
         
 
-        primaryStage.setTitle("myhouse");
+        primaryStage.setTitle("MyHouse");
         borderPane.setCenter(flow);
         primaryStage.setScene(new Scene(borderPane));
-        primaryStage.setResizable(false);
+        //primaryStage.setResizable(false);
         primaryStage.show();
         }
     }
