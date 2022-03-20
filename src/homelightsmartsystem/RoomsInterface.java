@@ -10,11 +10,13 @@ package homelightsmartsystem;
  * @author STAR LIGHT COMP TECH
  */
 public interface RoomsInterface {
-     void SwitchRoom1();
-     void SwitchRoom2();
-     void SwitchRoom3();
-    void SwitchRoom4();
-    void SwitchRoom5();
-    void SwitchRoom6();
-    void SwitchRoom7();
+  public  void SwitchAll();
+  public  void SwitchTwoRooms();
+ public    void SwitchRoom1();
+  public   void SwitchRoom2();
+  public   void SwitchRoom3();
+  public  void SwitchRoom4();
+   public void SwitchRoom5();
+ public   void SwitchRoom6();
+ public   void SwitchRoom7();
 }

@@ -7,13 +7,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 class Rooms extends StackPane implements RoomsInterface{
-   private Rectangle RoomONE;
-    private Rectangle RoomTWO;
-    private Rectangle RoomTHREE;
-    private Rectangle RoomFOUR;
-    private Rectangle RoomFIVE;
-    private Rectangle RoomSIX;
-    private Rectangle RoomSEVEN;
+   private final Rectangle RoomONE;
+    private final Rectangle RoomTWO;
+    private final Rectangle RoomTHREE;
+    private final Rectangle RoomFOUR;
+    private final Rectangle RoomFIVE;
+    private final Rectangle RoomSIX;
+    private final Rectangle RoomSEVEN;
     Rooms(){
 
         HBox hBox = new HBox();
@@ -78,7 +78,8 @@ class Rooms extends StackPane implements RoomsInterface{
         getChildren().addAll(hBox,pane);
 
     }
-    void SwitchAll(){
+   @Override
+    public void SwitchAll(){
         if(RoomONE.getFill() == Color.GREY || RoomTWO.getFill() == Color.GREY || RoomTHREE.getFill() == Color.GREY|| 
                 RoomFOUR.getFill() == Color.GREY|| RoomFIVE.getFill() == Color.GREY|| RoomSIX.getFill() == 
                 Color.GREY|| RoomSEVEN.getFill() == Color.GREY) {
@@ -100,7 +101,8 @@ class Rooms extends StackPane implements RoomsInterface{
             RoomSEVEN.setFill(Color.GREY);
         }
     }
- void SwitchTwoRooms(){
+   @Override
+ public void SwitchTwoRooms(){
          if(RoomONE.getFill() == Color.GREY || RoomTWO.getFill() == Color.GREY) {
              RoomONE.setFill(Color.YELLOW);
              RoomTWO.setFill(Color.GREEN);
