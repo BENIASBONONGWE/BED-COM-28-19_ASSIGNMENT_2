@@ -1,3 +1,4 @@
+import homelightsmartsystem.RoomsInterface;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -5,7 +6,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-class Rooms extends StackPane {
+class Rooms extends StackPane implements RoomsInterface{
    private Rectangle RoomONE;
     private Rectangle RoomTWO;
     private Rectangle RoomTHREE;
@@ -109,7 +110,8 @@ class Rooms extends StackPane {
              RoomTWO.setFill(Color.GREY);
          }
     }
-    void SwitchRoom1(){
+ @Override
+    public void SwitchRoom1(){
         if(RoomONE.getFill() == Color.GREY) {
             RoomONE.setFill(Color.YELLOW);
         }
@@ -117,7 +119,8 @@ class Rooms extends StackPane {
             RoomONE.setFill(Color.GREY);
         }
     }
-    void SwitchRoom2(){
+   @Override
+    public void SwitchRoom2(){
         if(RoomTWO.getFill() == Color.GREY) {
             RoomTWO.setFill(Color.GREEN);
         }
@@ -125,7 +128,8 @@ class Rooms extends StackPane {
             RoomTWO.setFill(Color.GREY);
         }
     }
-    void SwitchRoom3(){
+   @Override
+    public void SwitchRoom3(){
         if(RoomTHREE.getFill() == Color.GREY) {
             RoomTHREE.setFill(Color.ORANGE);
         }
@@ -133,7 +137,8 @@ class Rooms extends StackPane {
             RoomTHREE.setFill(Color.GREY);
         }
     }
-    void SwitchRoom4(){
+    @Override
+    public void SwitchRoom4(){
         if(RoomFOUR.getFill() == Color.GREY) {
             RoomFOUR.setFill(Color.ORANGE);
         }
@@ -141,7 +146,8 @@ class Rooms extends StackPane {
             RoomFOUR.setFill(Color.GREY);
         }
     }
-    void SwitchRoom5(){
+   @Override
+    public void SwitchRoom5(){
         if(RoomFIVE.getFill() == Color.GREY) {
             RoomFIVE.setFill(Color.YELLOW);
         }
@@ -149,7 +155,8 @@ class Rooms extends StackPane {
             RoomFIVE.setFill(Color.GREY);
         }
     }
-    void SwitchRoom6(){
+   @Override
+    public void SwitchRoom6(){
         if(RoomSIX.getFill() == Color.GREY) {
             RoomSIX.setFill(Color.RED);
         }
@@ -157,7 +164,8 @@ class Rooms extends StackPane {
             RoomSIX.setFill(Color.GREY);
         }
     }
-    void SwitchRoom7(){
+   @Override
+    public void SwitchRoom7(){
         if(RoomSEVEN.getFill() == Color.GREY) {
             RoomSEVEN.setFill(Color.YELLOW);
         }
